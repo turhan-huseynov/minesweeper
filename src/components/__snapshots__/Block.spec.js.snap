@@ -1,0 +1,31 @@
+// Vitest Snapshot v1
+
+exports[`Block component > should match the snapshot 1`] = `
+<div>
+  <div
+    class="block unselectable highlight flipped"
+    data-v-22c6a20d=""
+  >
+    <div
+      class="flip-block flipped"
+      data-v-22c6a20d=""
+    >
+      <div
+        class="flip-block-inner"
+        data-v-22c6a20d=""
+      >
+        <div
+          class="flip-block-front"
+          data-v-22c6a20d=""
+        />
+        <div
+          class="flip-block-back"
+          data-v-22c6a20d=""
+        >
+          5
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
