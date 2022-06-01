@@ -29,9 +29,9 @@ import Canvas from "@/components/Canvas.vue";
 import Timer from "@/components/Timer.vue";
 import { generateArrayOfUniqueNumbers } from "@/utils/helpers";
 
-const height = 5;
-const width = 5;
-const mineCount = 1;
+const height = 12;
+const width = 12;
+const mineCount = 20;
 const fieldArr = [];
 let gameNumber = ref(0);
 let mines;
