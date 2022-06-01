@@ -18,25 +18,16 @@
             </button>
         </div>
         <Timer class="unselectable" :count="count" />
-        <ConfettiExplosion
-            v-if="visible"
-            id="confetti"
-            :particleSize="5"
-            :duration="2000"
-            :stageHeight="450"
-            :stageWidth="500"
-        />
     </div>
 </template>
 
 <script setup>
-import { ref, reactive, nextTick } from "vue";
+import { ref, reactive } from "vue";
 import Swal from "sweetalert2";
 import Title from "@/components/Title.vue";
 import Canvas from "@/components/Canvas.vue";
 import Timer from "@/components/Timer.vue";
 import { generateArrayOfUniqueNumbers } from "@/utils/helpers";
-import ConfettiExplosion from "vue-confetti-explosion";
 
 const height = 5;
 const width = 5;
@@ -161,7 +152,7 @@ function handleBlockClick() {
     setTimeout(() => {
         if (checkIsFinished()) {
             console.log("YOU WON");
-            explode();
+            Swal.fire("Congratulations!");
             showAllBlocks();
         }
     }, 200);
@@ -195,15 +186,6 @@ function startInterval() {
 function stopInterval() {
     clearInterval(countInterval);
 }
-
-// Confetti
-const visible = ref(false);
-
-const explode = async () => {
-    visible.value = false;
-    await nextTick();
-    visible.value = true;
-};
 </script>
 
 <style lang="scss">
@@ -213,11 +195,6 @@ const explode = async () => {
 }
 .unselectable {
     user-select: none;
-}
-#confetti {
-    position: absolute;
-    top: 30%;
-    left: 50%;
 }
 </style>
 
