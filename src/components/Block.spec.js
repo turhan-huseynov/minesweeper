@@ -19,8 +19,8 @@ describe("Block component", () => {
 
     it("should render a number block", () => {
         wrapper = render(Block, { props: { blockText: 5 } });
-        const button = wrapper.getByText(5);
-        expect(button).toBeTruthy();
+        const numberElem = wrapper.getByText(5);
+        expect(numberElem).toBeTruthy();
     });
 
     it("should render a mine", () => {
