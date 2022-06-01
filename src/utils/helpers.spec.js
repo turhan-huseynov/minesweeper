@@ -10,8 +10,9 @@ describe("Helpers", () => {
         const arr = generateArrayOfUniqueNumbers({ size: 5 });
         expect(arr).toHaveLength(0);
     });
-    it("should return filled array if interval is twice bigger than size", () => {
+    it("should return uniquely filled array if interval is twice bigger than size", () => {
         const arr = generateArrayOfUniqueNumbers({ size: 5, interval: 10 });
         expect(arr).toHaveLength(5);
+        expect(new Set(arr).size === arr.length).toBeTruthy();
     });
 });
