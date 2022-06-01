@@ -25,8 +25,8 @@ describe("Block component", () => {
 
     it("should render a mine", () => {
         wrapper = render(Block, { props: { isMine: true, blockText: "Mine" } });
-        const button = wrapper.getByText("Mine");
-        expect(button).toBeTruthy();
+        const mineElem = wrapper.getByAltText("mine");
+        expect(mineElem).toBeTruthy();
     });
 
     it("should call the prop function", async () => {

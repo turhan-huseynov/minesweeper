@@ -4,7 +4,7 @@
             <div class="flip-block-inner">
                 <div class="flip-block-front"></div>
                 <div class="flip-block-back">
-                    <img v-if="isMine" height="30" width="30" src="@/assets/mine.jpg" />
+                    <img v-if="isMine" alt="mine" height="30" width="30" src="@/assets/mine.jpg" />
                     <div v-else>{{ blockText || "" }}</div>
                 </div>
             </div>
