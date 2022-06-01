@@ -22,7 +22,11 @@ exports[`Block component > should match the snapshot 1`] = `
           class="flip-block-back"
           data-v-22c6a20d=""
         >
-          5
+          <div
+            data-v-22c6a20d=""
+          >
+            5
+          </div>
         </div>
       </div>
     </div>
